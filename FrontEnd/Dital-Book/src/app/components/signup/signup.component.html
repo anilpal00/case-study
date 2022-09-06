@@ -1,0 +1,33 @@
+  <div class="bootstrap-wrapper">
+    <div class="container mt text-center">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center">Registration here</h1>
+
+                <form (ngSubmit)="register()">
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>UserName</mat-label>
+                        <input required name="username" [(ngModel)]="user.username" type="text" matInput>
+                    </mat-form-field>
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input required  name="password" [(ngModel)]="user.password" type="password" matInput>
+                    </mat-form-field>
+                    <mat-form-field class="full-width" appearance="outline">
+                      <mat-label>Email</mat-label>
+                      <input required  name="Email" [(ngModel)]="user.email" type="email" matInput>
+                  </mat-form-field>
+                  <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Mobile Number</mat-label>
+                    <input required  name="Mobile" [(ngModel)]="user.mobile" type="mobile" matInput>
+                </mat-form-field>
+                    <div class="container text-center">
+                        <button type="submit" mat-raised-button color="primary">Submit</button>
+                        <button type="reset" style="margin-left:10px" mat-raised-button color="accent">Reset</button>
+                    </div>
+                </form>
+                {{user | json}}
+            </div>
+        </div>
+    </div>
+</div>
