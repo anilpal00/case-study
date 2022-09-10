@@ -8,6 +8,7 @@ class BookServiceApplicationTests {
 
 	@Test
 	void contextLoads() {
+		BookServiceApplication.main(new String[] {});
 	}
 
 }

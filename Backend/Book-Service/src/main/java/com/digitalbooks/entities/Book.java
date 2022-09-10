@@ -1,6 +1,5 @@
 package com.digitalbooks.entities;
 
-import java.math.BigDecimal;
 import java.sql.Date;
 
 import javax.persistence.Entity;
@@ -32,7 +31,7 @@ public class Book {
 	private String bookImage;
 	private String bookTitle;
 	private String bookCategory;
-	private BigDecimal bookPrice;
+	private Double bookPrice;
 		
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "id", nullable = false)

@@ -1,6 +1,5 @@
 package com.digitalbooks.dao;
 
-import java.math.BigDecimal;
 import java.sql.Date;
 
 import org.hibernate.annotations.ColumnDefault;
@@ -20,7 +19,7 @@ public class BookDto {
 	private String bookImage;
 	private String bookTitle;
 	private String bookCategory;
-	private BigDecimal bookPrice;
+	private Double bookPrice;
 	private User id;
 	private String bookPublisher;
 	private Date bookPublisherDate;
