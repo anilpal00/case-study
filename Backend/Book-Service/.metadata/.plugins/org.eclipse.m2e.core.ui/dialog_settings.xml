@@ -2,7 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
-			<item value="D:\case-study\Backend\Book-Service"/>
+			<item value="D:\case_study_new\Backend"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
