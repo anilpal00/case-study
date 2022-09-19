@@ -46,5 +46,12 @@ public class BookController {
 		book.getUser().getUsername();
 		return  ResponseEntity.ok(book);
 	}
+	
+	@GetMapping("/book/purchased/{userId}")
+	public ResponseEntity<String[]> getUserBook(@PathVariable Integer userId) {
+		String[] book = this.bookService.getUserBook(userId);
+
+		return  ResponseEntity.ok(book);
+	}
 
 }

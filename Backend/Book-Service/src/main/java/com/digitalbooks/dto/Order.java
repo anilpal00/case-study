@@ -16,6 +16,8 @@ public class Order {
 	private String method;
 	private String intent;
 	private String description;
+	private Integer bookId;
+	private Integer userId;
 
 }
 

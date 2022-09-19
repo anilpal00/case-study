@@ -24,47 +24,54 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name="Book")
+@Table(name = "Book")
 public class Book {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer bookId;
+
+//	@NotBlank(message = "Name must not be empty")
 	private String bookName;
+	
 	private String bookImage;
+	
 	private String bookTitle;
+
+//	@NotBlank(message = "Category must not be empty")
 	private String bookCategory;
+
+//	@NotBlank(message = "Price must not be empty")
 	private Double bookPrice;
-		
+
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "user_id", nullable = false)
-	@OnDelete(action=OnDeleteAction.CASCADE)
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"}) 
+	@OnDelete(action = OnDeleteAction.CASCADE)
+	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 	private User user;
-	
+
 	@ManyToOne(targetEntity = Role.class, cascade = CascadeType.ALL)
 	@JoinColumn(name = "role_id", referencedColumnName = "id")
 	private Role role;
-	
+
 	private String bookPublisher;
-	
-	 @CreationTimestamp
+
+	@CreationTimestamp
 	private Date bookPublisherDate;
-	
+
 	private Integer bookChapters;
-	
+
 	@ColumnDefault("0")
 	private Integer bookStatus;
-	
-    @CreationTimestamp
-    private Date createTime;
-    
-    @UpdateTimestamp
-    private Date updateTime;
-	
+
+	@CreationTimestamp
+	private Date createTime;
+
+	@UpdateTimestamp
+	private Date updateTime;
+
 	public Book() {
-		
+
 	}
-	
-	
+
 }
