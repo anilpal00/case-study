@@ -56,10 +56,12 @@ class BookControllerTest {
 		when(bookService.createAuthorBook(book, 1)).thenReturn(book);
 		ResponseEntity<Book> savedBook =	bookController.createAuthorBook(book, role.getId());
 		bookController.getAllBooks();
+		//ResponseEntity<Book> getBookId =bookController.getSingleBook(1);
+		bookController.getUserBook(user.getId());
 		//bookController.getSingleBook(book.getBookId());
 		assertEquals(savedBook.getStatusCodeValue(),201);
 		assertEquals(role.getName(),ERole.ROLE_ADMIN);
-		//System.out.println("======================"+bookServiceImpl.createAuthorBook(book, 1));
+		
 		}
 
 }
